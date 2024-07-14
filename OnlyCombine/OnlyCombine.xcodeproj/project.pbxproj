@@ -19,6 +19,8 @@
 		B02F57E52C42A9FB00206139 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57E42C42A9FB00206139 /* JSONParameterEncoder.swift */; };
 		B02F57E92C42C72300206139 /* CAlamofireError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57E82C42C72300206139 /* CAlamofireError.swift */; };
 		B02F57EB2C42C76200206139 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57EA2C42C76200206139 /* DataResponse.swift */; };
+		B02F57EE2C42D66B00206139 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57ED2C42D66B00206139 /* Route.swift */; };
+		B02F57F02C42D6B200206139 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57EF2C42D6B200206139 /* HTTPTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		B02F57E42C42A9FB00206139 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		B02F57E82C42C72300206139 /* CAlamofireError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAlamofireError.swift; sourceTree = "<group>"; };
 		B02F57EA2C42C76200206139 /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
+		B02F57ED2C42D66B00206139 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		B02F57EF2C42D6B200206139 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 		B02F57E62C42AA6400206139 /* CAlamofire */ = {
 			isa = PBXGroup;
 			children = (
+				B02F57EC2C42D64C00206139 /* EndpointType */,
 				B02F57E72C42C70800206139 /* Error */,
 				B02F57DF2C42A78B00206139 /* Encoding */,
 				B02F57EA2C42C76200206139 /* DataResponse.swift */,
@@ -196,6 +201,15 @@
 				B02F57E82C42C72300206139 /* CAlamofireError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		B02F57EC2C42D64C00206139 /* EndpointType */ = {
+			isa = PBXGroup;
+			children = (
+				B02F57ED2C42D66B00206139 /* Route.swift */,
+				B02F57EF2C42D6B200206139 /* HTTPTask.swift */,
+			);
+			path = EndpointType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,8 +345,10 @@
 				B02F57E52C42A9FB00206139 /* JSONParameterEncoder.swift in Sources */,
 				B02F57B42C41670300206139 /* SearchView.swift in Sources */,
 				B02F57E32C42A7B900206139 /* ParameterEncodable.swift in Sources */,
+				B02F57F02C42D6B200206139 /* HTTPTask.swift in Sources */,
 				B02F57EB2C42C76200206139 /* DataResponse.swift in Sources */,
 				B02F57E12C42A79700206139 /* URLQueryEncoder.swift in Sources */,
+				B02F57EE2C42D66B00206139 /* Route.swift in Sources */,
 				B02F57B22C41670300206139 /* OnlyCombineApp.swift in Sources */,
 				B02F57E92C42C72300206139 /* CAlamofireError.swift in Sources */,
 			);

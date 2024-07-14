@@ -1,6 +1,5 @@
 import Foundation
-import Combine
 
 public protocol ParameterEncodable {
-    func encode(request: URLRequest, with parameter: [String: Any]) -> Future<URLRequest, CAlamofireError>
+    func encode(request: inout URLRequest, with parameter: [String: Any]) throws
 }
