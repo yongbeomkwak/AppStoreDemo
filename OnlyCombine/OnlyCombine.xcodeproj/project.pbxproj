@@ -27,6 +27,10 @@
 		B02F57FA2C4397D100206139 /* InterceptorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57F92C4397D100206139 /* InterceptorType.swift */; };
 		B02F57FD2C43987100206139 /* CAlamofireClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57FC2C43987100206139 /* CAlamofireClientProtocol.swift */; };
 		B02F57FF2C4398C000206139 /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57FE2C4398C000206139 /* CAlamofireClient.swift */; };
+		B02F58042C43AA8000206139 /* iTunesAPIDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58032C43AA8000206139 /* iTunesAPIDomain.swift */; };
+		B02F58062C43ACE900206139 /* iTunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58052C43ACE900206139 /* iTunesEndpoint.swift */; };
+		B02F58092C43AE3700206139 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58082C43AE3700206139 /* NetworkingError.swift */; };
+		B02F580D2C43AE9600206139 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F580C2C43AE9600206139 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		B02F57F92C4397D100206139 /* InterceptorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorType.swift; sourceTree = "<group>"; };
 		B02F57FC2C43987100206139 /* CAlamofireClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAlamofireClientProtocol.swift; sourceTree = "<group>"; };
 		B02F57FE2C4398C000206139 /* CAlamofireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
+		B02F58032C43AA8000206139 /* iTunesAPIDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIDomain.swift; sourceTree = "<group>"; };
+		B02F58052C43ACE900206139 /* iTunesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesEndpoint.swift; sourceTree = "<group>"; };
+		B02F58082C43AE3700206139 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		B02F580C2C43AE9600206139 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,7 @@
 		B02F57B02C41670300206139 /* OnlyCombine */ = {
 			isa = PBXGroup;
 			children = (
+				B02F58002C43AA0900206139 /* Library */,
 				B02F57DC2C4291D200206139 /* Core */,
 				B02F57DB2C41724200206139 /* Domain */,
 				B02F57B12C41670300206139 /* OnlyCombineApp.swift */,
@@ -173,6 +182,7 @@
 		B02F57DD2C429CC300206139 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B02F58012C43AA1900206139 /* Interface */,
 				B02F57DE2C42A72F00206139 /* Sources */,
 			);
 			path = Networking;
@@ -181,7 +191,6 @@
 		B02F57DE2C42A72F00206139 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B02F57E62C42AA6400206139 /* CAlamofire */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -252,6 +261,41 @@
 				B02F57FE2C4398C000206139 /* CAlamofireClient.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		B02F58002C43AA0900206139 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B02F57E62C42AA6400206139 /* CAlamofire */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		B02F58012C43AA1900206139 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58072C43AE2C00206139 /* Error */,
+				B02F58022C43AA5900206139 /* Endpoint */,
+				B02F580C2C43AE9600206139 /* Networking.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		B02F58022C43AA5900206139 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58032C43AA8000206139 /* iTunesAPIDomain.swift */,
+				B02F58052C43ACE900206139 /* iTunesEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		B02F58072C43AE2C00206139 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58082C43AE3700206139 /* NetworkingError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,8 +428,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02F580D2C43AE9600206139 /* Networking.swift in Sources */,
 				B02F57F22C43945F00206139 /* EndpointType.swift in Sources */,
 				B02F57E52C42A9FB00206139 /* JSONParameterEncoder.swift in Sources */,
+				B02F58062C43ACE900206139 /* iTunesEndpoint.swift in Sources */,
+				B02F58042C43AA8000206139 /* iTunesAPIDomain.swift in Sources */,
+				B02F58092C43AE3700206139 /* NetworkingError.swift in Sources */,
 				B02F57F42C43947A00206139 /* AnyEndpoint.swift in Sources */,
 				B02F57B42C41670300206139 /* SearchView.swift in Sources */,
 				B02F57F72C4396E600206139 /* URL+Endpoint.swift in Sources */,
