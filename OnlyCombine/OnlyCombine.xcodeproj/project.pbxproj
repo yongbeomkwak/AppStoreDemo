@@ -21,6 +21,12 @@
 		B02F57EB2C42C76200206139 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57EA2C42C76200206139 /* DataResponse.swift */; };
 		B02F57EE2C42D66B00206139 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57ED2C42D66B00206139 /* Route.swift */; };
 		B02F57F02C42D6B200206139 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57EF2C42D6B200206139 /* HTTPTask.swift */; };
+		B02F57F22C43945F00206139 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57F12C43945F00206139 /* EndpointType.swift */; };
+		B02F57F42C43947A00206139 /* AnyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57F32C43947A00206139 /* AnyEndpoint.swift */; };
+		B02F57F72C4396E600206139 /* URL+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57F62C4396E600206139 /* URL+Endpoint.swift */; };
+		B02F57FA2C4397D100206139 /* InterceptorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57F92C4397D100206139 /* InterceptorType.swift */; };
+		B02F57FD2C43987100206139 /* CAlamofireClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57FC2C43987100206139 /* CAlamofireClientProtocol.swift */; };
+		B02F57FF2C4398C000206139 /* CAlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57FE2C4398C000206139 /* CAlamofireClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,12 @@
 		B02F57EA2C42C76200206139 /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		B02F57ED2C42D66B00206139 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		B02F57EF2C42D6B200206139 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		B02F57F12C43945F00206139 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		B02F57F32C43947A00206139 /* AnyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEndpoint.swift; sourceTree = "<group>"; };
+		B02F57F62C4396E600206139 /* URL+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Endpoint.swift"; sourceTree = "<group>"; };
+		B02F57F92C4397D100206139 /* InterceptorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorType.swift; sourceTree = "<group>"; };
+		B02F57FC2C43987100206139 /* CAlamofireClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAlamofireClientProtocol.swift; sourceTree = "<group>"; };
+		B02F57FE2C4398C000206139 /* CAlamofireClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAlamofireClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +199,9 @@
 		B02F57E62C42AA6400206139 /* CAlamofire */ = {
 			isa = PBXGroup;
 			children = (
+				B02F57FB2C43984A00206139 /* Client */,
+				B02F57F82C4397C200206139 /* Interceptor */,
+				B02F57F52C4396D300206139 /* Extensions */,
 				B02F57EC2C42D64C00206139 /* EndpointType */,
 				B02F57E72C42C70800206139 /* Error */,
 				B02F57DF2C42A78B00206139 /* Encoding */,
@@ -208,8 +223,35 @@
 			children = (
 				B02F57ED2C42D66B00206139 /* Route.swift */,
 				B02F57EF2C42D6B200206139 /* HTTPTask.swift */,
+				B02F57F12C43945F00206139 /* EndpointType.swift */,
+				B02F57F32C43947A00206139 /* AnyEndpoint.swift */,
 			);
 			path = EndpointType;
+			sourceTree = "<group>";
+		};
+		B02F57F52C4396D300206139 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B02F57F62C4396E600206139 /* URL+Endpoint.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B02F57F82C4397C200206139 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				B02F57F92C4397D100206139 /* InterceptorType.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		B02F57FB2C43984A00206139 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				B02F57FC2C43987100206139 /* CAlamofireClientProtocol.swift */,
+				B02F57FE2C4398C000206139 /* CAlamofireClient.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,13 +384,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02F57F22C43945F00206139 /* EndpointType.swift in Sources */,
 				B02F57E52C42A9FB00206139 /* JSONParameterEncoder.swift in Sources */,
+				B02F57F42C43947A00206139 /* AnyEndpoint.swift in Sources */,
 				B02F57B42C41670300206139 /* SearchView.swift in Sources */,
+				B02F57F72C4396E600206139 /* URL+Endpoint.swift in Sources */,
 				B02F57E32C42A7B900206139 /* ParameterEncodable.swift in Sources */,
 				B02F57F02C42D6B200206139 /* HTTPTask.swift in Sources */,
 				B02F57EB2C42C76200206139 /* DataResponse.swift in Sources */,
 				B02F57E12C42A79700206139 /* URLQueryEncoder.swift in Sources */,
+				B02F57FA2C4397D100206139 /* InterceptorType.swift in Sources */,
+				B02F57FF2C4398C000206139 /* CAlamofireClient.swift in Sources */,
 				B02F57EE2C42D66B00206139 /* Route.swift in Sources */,
+				B02F57FD2C43987100206139 /* CAlamofireClientProtocol.swift in Sources */,
 				B02F57B22C41670300206139 /* OnlyCombineApp.swift in Sources */,
 				B02F57E92C42C72300206139 /* CAlamofireError.swift in Sources */,
 			);
