@@ -31,6 +31,17 @@
 		B02F58062C43ACE900206139 /* iTunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58052C43ACE900206139 /* iTunesEndpoint.swift */; };
 		B02F58092C43AE3700206139 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58082C43AE3700206139 /* NetworkingError.swift */; };
 		B02F580D2C43AE9600206139 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F580C2C43AE9600206139 /* Networking.swift */; };
+		B02F58112C43B17000206139 /* LoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58102C43B17000206139 /* LoggingInterceptor.swift */; };
+		B02F58132C43B20400206139 /* CombineNetworkingImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58122C43B20400206139 /* CombineNetworkingImpl.swift */; };
+		B02F58162C43F9D500206139 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58152C43F9D500206139 /* SearchAPI.swift */; };
+		B02F581A2C4408BF00206139 /* FetchSearchResultUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58192C4408BF00206139 /* FetchSearchResultUseCase.swift */; };
+		B02F581E2C44099800206139 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F581D2C44099800206139 /* SearchRepository.swift */; };
+		B02F58222C440AC600206139 /* SearchResultResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58212C440AC600206139 /* SearchResultResponseDTO.swift */; };
+		B02F58252C440B4A00206139 /* SearchDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58242C440B4A00206139 /* SearchDetailEntity.swift */; };
+		B02F58282C440BED00206139 /* RemoteSearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58272C440BED00206139 /* RemoteSearchDataSource.swift */; };
+		B02F582B2C440C4D00206139 /* FetchSearchResultUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F582A2C440C4D00206139 /* FetchSearchResultUseCaseImpl.swift */; };
+		B02F582E2C440D6E00206139 /* SearchRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F582D2C440D6E00206139 /* SearchRepositoryImpl.swift */; };
+		B02F58312C440DEC00206139 /* RemoteSearchDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58302C440DEC00206139 /* RemoteSearchDataSourceImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +89,17 @@
 		B02F58052C43ACE900206139 /* iTunesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesEndpoint.swift; sourceTree = "<group>"; };
 		B02F58082C43AE3700206139 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		B02F580C2C43AE9600206139 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		B02F58102C43B17000206139 /* LoggingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingInterceptor.swift; sourceTree = "<group>"; };
+		B02F58122C43B20400206139 /* CombineNetworkingImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineNetworkingImpl.swift; sourceTree = "<group>"; };
+		B02F58152C43F9D500206139 /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
+		B02F58192C4408BF00206139 /* FetchSearchResultUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSearchResultUseCase.swift; sourceTree = "<group>"; };
+		B02F581D2C44099800206139 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		B02F58212C440AC600206139 /* SearchResultResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultResponseDTO.swift; sourceTree = "<group>"; };
+		B02F58242C440B4A00206139 /* SearchDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailEntity.swift; sourceTree = "<group>"; };
+		B02F58272C440BED00206139 /* RemoteSearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSearchDataSource.swift; sourceTree = "<group>"; };
+		B02F582A2C440C4D00206139 /* FetchSearchResultUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSearchResultUseCaseImpl.swift; sourceTree = "<group>"; };
+		B02F582D2C440D6E00206139 /* SearchRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryImpl.swift; sourceTree = "<group>"; };
+		B02F58302C440DEC00206139 /* RemoteSearchDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSearchDataSourceImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +189,7 @@
 		B02F57DB2C41724200206139 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B02F58142C43F9C500206139 /* SearchDomain */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -191,6 +214,8 @@
 		B02F57DE2C42A72F00206139 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B02F580E2C43AFDA00206139 /* Interceptor */,
+				B02F58122C43B20400206139 /* CombineNetworkingImpl.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -296,6 +321,118 @@
 				B02F58082C43AE3700206139 /* NetworkingError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		B02F580E2C43AFDA00206139 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				B02F580F2C43B15900206139 /* Logging */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		B02F580F2C43B15900206139 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58102C43B17000206139 /* LoggingInterceptor.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		B02F58142C43F9C500206139 /* SearchDomain */ = {
+			isa = PBXGroup;
+			children = (
+				B02F581B2C44096E00206139 /* Interface */,
+				B02F581F2C440AA100206139 /* Sources */,
+				B02F58152C43F9D500206139 /* SearchAPI.swift */,
+			);
+			path = SearchDomain;
+			sourceTree = "<group>";
+		};
+		B02F58182C4408AC00206139 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58192C4408BF00206139 /* FetchSearchResultUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B02F581B2C44096E00206139 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58262C440BD800206139 /* DataSoruce */,
+				B02F58232C440B4200206139 /* Entity */,
+				B02F581C2C44098F00206139 /* Repository */,
+				B02F58182C4408AC00206139 /* UseCase */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		B02F581C2C44098F00206139 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B02F581D2C44099800206139 /* SearchRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B02F581F2C440AA100206139 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B02F582F2C440DC600206139 /* DataSource */,
+				B02F582C2C440D5E00206139 /* Repository */,
+				B02F58292C440C3500206139 /* UseCase */,
+				B02F58202C440AAF00206139 /* DTO */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B02F58202C440AAF00206139 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58212C440AC600206139 /* SearchResultResponseDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		B02F58232C440B4200206139 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58242C440B4A00206139 /* SearchDetailEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B02F58262C440BD800206139 /* DataSoruce */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58272C440BED00206139 /* RemoteSearchDataSource.swift */,
+			);
+			path = DataSoruce;
+			sourceTree = "<group>";
+		};
+		B02F58292C440C3500206139 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B02F582A2C440C4D00206139 /* FetchSearchResultUseCaseImpl.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B02F582C2C440D5E00206139 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B02F582D2C440D6E00206139 /* SearchRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B02F582F2C440DC600206139 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B02F58302C440DEC00206139 /* RemoteSearchDataSourceImpl.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +565,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02F58162C43F9D500206139 /* SearchAPI.swift in Sources */,
+				B02F58252C440B4A00206139 /* SearchDetailEntity.swift in Sources */,
 				B02F580D2C43AE9600206139 /* Networking.swift in Sources */,
+				B02F58112C43B17000206139 /* LoggingInterceptor.swift in Sources */,
 				B02F57F22C43945F00206139 /* EndpointType.swift in Sources */,
 				B02F57E52C42A9FB00206139 /* JSONParameterEncoder.swift in Sources */,
 				B02F58062C43ACE900206139 /* iTunesEndpoint.swift in Sources */,
@@ -441,10 +581,18 @@
 				B02F57F02C42D6B200206139 /* HTTPTask.swift in Sources */,
 				B02F57EB2C42C76200206139 /* DataResponse.swift in Sources */,
 				B02F57E12C42A79700206139 /* URLQueryEncoder.swift in Sources */,
+				B02F58282C440BED00206139 /* RemoteSearchDataSource.swift in Sources */,
+				B02F581E2C44099800206139 /* SearchRepository.swift in Sources */,
 				B02F57FA2C4397D100206139 /* InterceptorType.swift in Sources */,
 				B02F57FF2C4398C000206139 /* CAlamofireClient.swift in Sources */,
 				B02F57EE2C42D66B00206139 /* Route.swift in Sources */,
 				B02F57FD2C43987100206139 /* CAlamofireClientProtocol.swift in Sources */,
+				B02F58132C43B20400206139 /* CombineNetworkingImpl.swift in Sources */,
+				B02F582B2C440C4D00206139 /* FetchSearchResultUseCaseImpl.swift in Sources */,
+				B02F58312C440DEC00206139 /* RemoteSearchDataSourceImpl.swift in Sources */,
+				B02F582E2C440D6E00206139 /* SearchRepositoryImpl.swift in Sources */,
+				B02F58222C440AC600206139 /* SearchResultResponseDTO.swift in Sources */,
+				B02F581A2C4408BF00206139 /* FetchSearchResultUseCase.swift in Sources */,
 				B02F57B22C41670300206139 /* OnlyCombineApp.swift in Sources */,
 				B02F57E92C42C72300206139 /* CAlamofireError.swift in Sources */,
 			);

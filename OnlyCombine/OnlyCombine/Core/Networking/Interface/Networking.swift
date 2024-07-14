@@ -3,8 +3,7 @@ import Foundation
 
 
 public protocol CombineNetworking {
-    func request<T: Decodable>(_ endpoint: any EndpointType, dto: T.Type) -> Future<T, CAlamofireError>
-    func request(_ endpoint: any EndpointType) ->  Future<Void, CAlamofireError>
+    func request(_ endpoint: any EndpointType) -> AnyPublisher<Data, NetworkingError>
 }
 
 public protocol ConcurrenyNetworking {

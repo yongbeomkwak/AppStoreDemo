@@ -1,6 +1,7 @@
 import Combine
 import Foundation
 
+
 open class CAlamofireClient<Endpoint: EndpointType>: CAlamofireClientProtocol {
     private var interceptors: [any InterceptorType] = []
 
@@ -31,6 +32,7 @@ open class CAlamofireClient<Endpoint: EndpointType>: CAlamofireClientProtocol {
                 endpoint: endpoint,
                 using: self.interceptors
             ) { [weak self] result in
+                
                 guard let self = self else {
                     completion(.failure(CAlamofireError.notFoundOwner))
                     return
@@ -40,8 +42,8 @@ open class CAlamofireClient<Endpoint: EndpointType>: CAlamofireClientProtocol {
                     self.requestNetworking(request, endpoint: endpoint, completion: completion)
 
                 case let .failure(error):
-                    if let emdpointError = error as? CAlamofireError {
-                        completion(.failure(emdpointError))
+                    if let calamofireError = error as? CAlamofireError {
+                        completion(.failure(calamofireError))
                         return
                     }
                     completion(.failure(CAlamofireError.underlying(error)))
@@ -49,8 +51,8 @@ open class CAlamofireClient<Endpoint: EndpointType>: CAlamofireClientProtocol {
             }
             
         } catch {
-            if let emdpointError = error as? CAlamofireError {
-                completion(.failure(emdpointError))
+            if let calamofireError = error as? CAlamofireError {
+                completion(.failure(calamofireError))
                 return
             }
             completion(.failure(CAlamofireError.underlying(error)))
@@ -107,7 +109,12 @@ private extension CAlamofireClient {
         completion: @escaping (Result<DataResponse, CAlamofireError>) -> Void
     ) {
         
+        var request = request
+        request.setValue("XYZ", forHTTPHeaderField: "User-Agent")
+        
         URLSession.shared.dataTask(with: request) { data, response, error in
+            
+
             if let error {
                 if let emdpointError = error as? CAlamofireError {
                     completion(.failure(emdpointError))
@@ -131,7 +138,6 @@ private extension CAlamofireClient {
                 )
                 return
             }
-
             completion(.failure(CAlamofireError.networkError))
         }.resume()
     }

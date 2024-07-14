@@ -2,7 +2,7 @@ import Foundation
 
 public protocol iTunesEndpoint: EndpointType {
     var domain: iTunesAPIDomain { get }
-    var errorMap: [Int: Error] { get }
+    var errorMap: [Int: NetworkingError] { get }
 }
 
 public extension iTunesEndpoint {
@@ -24,7 +24,7 @@ public extension iTunesEndpoint {
 
     var timeout: TimeInterval { 60 }
 
-    var errorMap: [Int: Error] { [:] }
+    var errorMap: [Int: NetworkingError] { [:] }
 }
 
 private class BundleFinder {}
