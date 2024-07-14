@@ -3,6 +3,7 @@ import Combine
 
 final class CombineNetworkingImpl: CombineNetworking {
 
+    
         
     typealias Endpoint = AnyEndpoint
     private let client: CAlamofireClient<Endpoint>
@@ -12,12 +13,15 @@ final class CombineNetworkingImpl: CombineNetworking {
     }
      
     
-    
-    func request(_ endpoint: any EndpointType) -> AnyPublisher<Data, NetworkingError> {
-        
+    func request<T>(_ endpoint: any EndpointType, dto: T.Type) -> AnyPublisher<T, NetworkingError> where T : Decodable {
         let newEndpoint = AnyEndpoint.endpoint(endpoint)
+        
         return performRequest(newEndpoint)
             .map(\.data)
+            .decode(type: dto, decoder: JSONDecoder())
+            .mapError({ error in
+                NetworkingError.decodingError
+            })
             .eraseToAnyPublisher()
     }
     
@@ -34,7 +38,7 @@ private extension CombineNetworkingImpl {
                       let httpResponse = error.response?.request as? HTTPURLResponse
                       
                 else {
-                    return NetworkingError.badRequest
+                    return NetworkingError.internalServerError
                 }
 
                 return NetworkingError(statusCode: httpResponse.statusCode)

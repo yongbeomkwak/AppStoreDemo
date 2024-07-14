@@ -10,11 +10,9 @@ final class RemoteSearchDataSourceImpl: RemoteSearchDataSource {
     }
     
     func fetchSearchResult(text: String, limit: Int) -> AnyPublisher<SearchResultEntity, NetworkingError> {
-        networking.request(SearchAPI.fetchSearchItem(text: text, limit: limit))
-            .decode(type: SearchResultResponseDTO.self, decoder: JSONDecoder())
-            .mapError({ error in
-                NetworkingError.internalServerError
-            })
+        
+        
+        networking.request(SearchAPI.fetchSearchItem(text: text, limit: limit),dto: SearchResultResponseDTO.self)
             .map{$0.toDomain()}
             .eraseToAnyPublisher()
     }

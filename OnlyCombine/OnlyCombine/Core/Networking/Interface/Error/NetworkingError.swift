@@ -8,6 +8,7 @@ public enum NetworkingError: Error {
     case conflict
     case tooManyRequest
     case internalServerError
+    case decodingError
 
     public init(statusCode: Int) {
         switch statusCode {
@@ -31,6 +32,9 @@ public enum NetworkingError: Error {
 
         case 500:
             self = .internalServerError
+            
+        case 521:
+            self = .decodingError
 
         default:
             self = .internalServerError
