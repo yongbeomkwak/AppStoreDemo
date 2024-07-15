@@ -523,6 +523,9 @@
 				Base,
 			);
 			mainGroup = B02F57A52C41670300206139;
+			packageReferences = (
+				B0FF81352C44B4C4006F953C /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = B02F57AF2C41670300206139 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -924,6 +927,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0FF81352C44B4C4006F953C /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = B02F57A62C41670300206139 /* Project object */;
 }
