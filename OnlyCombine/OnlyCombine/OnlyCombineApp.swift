@@ -1,11 +1,5 @@
-//
-//  OnlyCombineApp.swift
-//  OnlyCombine
-//
-//  Created by yongbeomkwak on 7/12/24.
-//
-
 import SwiftUI
+import Swinject
 
 @main
 struct OnlyCombineApp: App {
