@@ -1,7 +1,7 @@
-import SwiftUI
+import Foundation
 import Combine
 
-class ViewModel {
+final class SearchViewModel {
     
     var subscription = Set<AnyCancellable>()
     
@@ -28,24 +28,4 @@ class ViewModel {
     }
      
     
-}
-
-struct SearchView: View {
-    
-    var viewModel = ViewModel()
-   
-    
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
-
-#Preview {
-    SearchView()
 }

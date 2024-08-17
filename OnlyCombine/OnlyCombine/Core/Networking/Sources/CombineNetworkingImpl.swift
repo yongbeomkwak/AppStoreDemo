@@ -4,7 +4,6 @@ import Combine
 final class CombineNetworkingImpl: CombineNetworking {
 
     
-        
     typealias Endpoint = AnyEndpoint
     private let client: CAlamofireClient<Endpoint>
 
