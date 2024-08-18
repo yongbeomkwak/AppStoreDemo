@@ -1,17 +1,32 @@
 import Foundation
 import Combine
+import SwiftUI
 
-final class SearchViewModel: ObservableObject  {
+final class SearchViewModel: BaseViewModel  {
         
-    private let subscription: Set<AnyCancellable> = Set<AnyCancellable>()
-    private let fetchSearchResultUseCase: any FetchSearchResultUseCase
+   
+    
+    @Published var path = NavigationPath()
+    @Published var querySstring: String = ""
+    var searchButtonDidTap: PassthroughSubject<Void, Never> = .init()
     
     
+    override init() {
+        super.init()
+        bind()
+    }
     
-    init(fetchSearchResultUseCase: any FetchSearchResultUseCase) {
-        self.fetchSearchResultUseCase = fetchSearchResultUseCase
+    
+    override func bind() {
+        
+        searchButtonDidTap
+            .withUnretained(self)
+            .sink { owner, _ in
+                owner.path.append(SearchNavigation(name: .result))
+            }
+            .store(in: &subscription)
         
     }
-     
+    
     
 }

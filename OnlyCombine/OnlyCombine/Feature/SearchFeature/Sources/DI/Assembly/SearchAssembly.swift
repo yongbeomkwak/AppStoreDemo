@@ -5,11 +5,25 @@ import Swinject
 struct SearchAssembly: Assembly {
     func assemble(container: Container) {
         
-        container.register(SearchView.self){ r  in
+        
+        container.register((any SearchResultFactory).self) { _ in
+          
             let usecase = container.resolve(FetchSearchResultUseCase.self)!
+          
             
-            return SearchView(viewModel: SearchViewModel(fetchSearchResultUseCase: usecase))
+            return SearchResultComponent(usecase: usecase)
         }
+    
+        
+        container.register(SearchView.self){ r  in
+           
+            let resultFactory = container.resolve((any SearchResultFactory).self)!
+            
+            return SearchView(viewModel: SearchViewModel(), resultViewFactory: resultFactory)
+        }
+        
+        
+
     }
     
 }
