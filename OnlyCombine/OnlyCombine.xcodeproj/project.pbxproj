@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B00D6C192C6F743800BE9EBA /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C182C6F743800BE9EBA /* ViewModelType.swift */; };
 		B00D6C1C2C7027B400BE9EBA /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C1B2C7027B400BE9EBA /* AppAssembly.swift */; };
 		B00D6C202C702A7800BE9EBA /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C1F2C702A7800BE9EBA /* SearchAssembly.swift */; };
 		B00D6C242C702AE700BE9EBA /* SearchDomainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C232C702AE700BE9EBA /* SearchDomainAssembly.swift */; };
+		B00D6C2B2C70392F00BE9EBA /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C2A2C70392F00BE9EBA /* Inject.swift */; };
+		B00D6C2F2C7039BC00BE9EBA /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C2E2C7039BC00BE9EBA /* DependencyInjector.swift */; };
+		B00D6C362C70E38A00BE9EBA /* FetchSearchResultUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C352C70E38A00BE9EBA /* FetchSearchResultUseCaseSpy.swift */; };
+		B00D6C442C71B55400BE9EBA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C432C71B55400BE9EBA /* RootView.swift */; };
+		B00D6C472C71B67C00BE9EBA /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C462C71B67C00BE9EBA /* RootViewModel.swift */; };
+		B00D6C4A2C71B75000BE9EBA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C492C71B75000BE9EBA /* BaseViewModel.swift */; };
 		B02F57B22C41670300206139 /* OnlyCombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57B12C41670300206139 /* OnlyCombineApp.swift */; };
 		B02F57B42C41670300206139 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57B32C41670300206139 /* SearchView.swift */; };
 		B02F57B62C41670500206139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02F57B52C41670500206139 /* Assets.xcassets */; };
@@ -47,7 +52,6 @@
 		B02F582E2C440D6E00206139 /* SearchRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F582D2C440D6E00206139 /* SearchRepositoryImpl.swift */; };
 		B02F58312C440DEC00206139 /* RemoteSearchDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F58302C440DEC00206139 /* RemoteSearchDataSourceImpl.swift */; };
 		B070F5242C6DC93100C77949 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B070F5232C6DC93100C77949 /* Swinject */; };
-		B070F5262C6DC93100C77949 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B070F5252C6DC93100C77949 /* Swinject-Dynamic */; };
 		B070F52C2C6DCBB500C77949 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B070F52B2C6DCBB400C77949 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,10 +73,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B00D6C182C6F743800BE9EBA /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		B00D6C1B2C7027B400BE9EBA /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		B00D6C1F2C702A7800BE9EBA /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
 		B00D6C232C702AE700BE9EBA /* SearchDomainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDomainAssembly.swift; sourceTree = "<group>"; };
+		B00D6C2A2C70392F00BE9EBA /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		B00D6C2E2C7039BC00BE9EBA /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
+		B00D6C352C70E38A00BE9EBA /* FetchSearchResultUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSearchResultUseCaseSpy.swift; sourceTree = "<group>"; };
+		B00D6C432C71B55400BE9EBA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B00D6C462C71B67C00BE9EBA /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		B00D6C492C71B75000BE9EBA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B02F57AE2C41670300206139 /* OnlyCombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlyCombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02F57B12C41670300206139 /* OnlyCombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCombineApp.swift; sourceTree = "<group>"; };
 		B02F57B32C41670300206139 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -120,7 +129,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B070F5242C6DC93100C77949 /* Swinject in Frameworks */,
-				B070F5262C6DC93100C77949 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +152,8 @@
 		B00D6C142C6F73A500BE9EBA /* RootFeature */ = {
 			isa = PBXGroup;
 			children = (
+				B00D6C452C71B61A00BE9EBA /* Sources */,
+				B02F57B12C41670300206139 /* OnlyCombineApp.swift */,
 				B00D6C1A2C70277E00BE9EBA /* DI */,
 			);
 			path = RootFeature;
@@ -160,17 +170,10 @@
 		B00D6C162C6F73F500BE9EBA /* BaseFeature */ = {
 			isa = PBXGroup;
 			children = (
-				B00D6C172C6F73FE00BE9EBA /* Abstract */,
+				B00D6C482C71B73300BE9EBA /* Abstract */,
+				B00D6C2D2C7039AC00BE9EBA /* DI */,
 			);
 			path = BaseFeature;
-			sourceTree = "<group>";
-		};
-		B00D6C172C6F73FE00BE9EBA /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				B00D6C182C6F743800BE9EBA /* ViewModelType.swift */,
-			);
-			path = Abstract;
 			sourceTree = "<group>";
 		};
 		B00D6C1A2C70277E00BE9EBA /* DI */ = {
@@ -213,6 +216,80 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		B00D6C252C7038F300BE9EBA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B00D6C282C70391200BE9EBA /* Protocol */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		B00D6C282C70391200BE9EBA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B00D6C292C70391A00BE9EBA /* DI */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B00D6C292C70391A00BE9EBA /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				B00D6C2A2C70392F00BE9EBA /* Inject.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		B00D6C2D2C7039AC00BE9EBA /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				B00D6C2E2C7039BC00BE9EBA /* DependencyInjector.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		B00D6C342C70E1F600BE9EBA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B00D6C352C70E38A00BE9EBA /* FetchSearchResultUseCaseSpy.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B00D6C372C70E8F900BE9EBA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B070F52A2C6DCB9E00C77949 /* ViewModels */,
+				B070F5292C6DCB8C00C77949 /* Views */,
+				B00D6C1D2C702A5A00BE9EBA /* DI */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B00D6C382C70E90A00BE9EBA /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		B00D6C452C71B61A00BE9EBA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B00D6C432C71B55400BE9EBA /* RootView.swift */,
+				B00D6C462C71B67C00BE9EBA /* RootViewModel.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B00D6C482C71B73300BE9EBA /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				B00D6C492C71B75000BE9EBA /* BaseViewModel.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
 		B02F57A52C41670300206139 = {
 			isa = PBXGroup;
 			children = (
@@ -236,11 +313,11 @@
 		B02F57B02C41670300206139 /* OnlyCombine */ = {
 			isa = PBXGroup;
 			children = (
+				B00D6C252C7038F300BE9EBA /* Utility */,
 				B070F5272C6DCB7500C77949 /* Feature */,
 				B02F58002C43AA0900206139 /* Library */,
 				B02F57DC2C4291D200206139 /* Core */,
 				B02F57DB2C41724200206139 /* Domain */,
-				B02F57B12C41670300206139 /* OnlyCombineApp.swift */,
 				B02F57B52C41670500206139 /* Assets.xcassets */,
 				B02F57B72C41670500206139 /* Preview Content */,
 			);
@@ -428,6 +505,7 @@
 		B02F58142C43F9C500206139 /* SearchDomain */ = {
 			isa = PBXGroup;
 			children = (
+				B00D6C342C70E1F600BE9EBA /* Tests */,
 				B00D6C212C702AC900BE9EBA /* DI */,
 				B02F581B2C44096E00206139 /* Interface */,
 				B02F581F2C440AA100206139 /* Sources */,
@@ -535,9 +613,8 @@
 		B070F5282C6DCB7D00C77949 /* SearchFeature */ = {
 			isa = PBXGroup;
 			children = (
-				B00D6C1D2C702A5A00BE9EBA /* DI */,
-				B070F52A2C6DCB9E00C77949 /* ViewModels */,
-				B070F5292C6DCB8C00C77949 /* Views */,
+				B00D6C382C70E90A00BE9EBA /* Interface */,
+				B00D6C372C70E8F900BE9EBA /* Sources */,
 			);
 			path = SearchFeature;
 			sourceTree = "<group>";
@@ -576,7 +653,6 @@
 			name = OnlyCombine;
 			packageProductDependencies = (
 				B070F5232C6DC93100C77949 /* Swinject */,
-				B070F5252C6DC93100C77949 /* Swinject-Dynamic */,
 			);
 			productName = OnlyCombine;
 			productReference = B02F57AE2C41670300206139 /* OnlyCombine.app */;
@@ -701,11 +777,13 @@
 				B02F58112C43B17000206139 /* LoggingInterceptor.swift in Sources */,
 				B02F57F22C43945F00206139 /* EndpointType.swift in Sources */,
 				B02F57E52C42A9FB00206139 /* JSONParameterEncoder.swift in Sources */,
+				B00D6C442C71B55400BE9EBA /* RootView.swift in Sources */,
 				B00D6C1C2C7027B400BE9EBA /* AppAssembly.swift in Sources */,
 				B02F58062C43ACE900206139 /* iTunesEndpoint.swift in Sources */,
 				B02F58042C43AA8000206139 /* iTunesAPIDomain.swift in Sources */,
 				B00D6C242C702AE700BE9EBA /* SearchDomainAssembly.swift in Sources */,
 				B02F58092C43AE3700206139 /* NetworkingError.swift in Sources */,
+				B00D6C2F2C7039BC00BE9EBA /* DependencyInjector.swift in Sources */,
 				B02F57F42C43947A00206139 /* AnyEndpoint.swift in Sources */,
 				B02F57B42C41670300206139 /* SearchView.swift in Sources */,
 				B02F57F72C4396E600206139 /* URL+Endpoint.swift in Sources */,
@@ -714,11 +792,15 @@
 				B00D6C202C702A7800BE9EBA /* SearchAssembly.swift in Sources */,
 				B02F57EB2C42C76200206139 /* DataResponse.swift in Sources */,
 				B02F57E12C42A79700206139 /* URLQueryEncoder.swift in Sources */,
+				B00D6C4A2C71B75000BE9EBA /* BaseViewModel.swift in Sources */,
 				B02F58282C440BED00206139 /* RemoteSearchDataSource.swift in Sources */,
+				B00D6C2B2C70392F00BE9EBA /* Inject.swift in Sources */,
 				B02F581E2C44099800206139 /* SearchRepository.swift in Sources */,
 				B02F57FA2C4397D100206139 /* InterceptorType.swift in Sources */,
+				B00D6C362C70E38A00BE9EBA /* FetchSearchResultUseCaseSpy.swift in Sources */,
 				B02F57FF2C4398C000206139 /* CAlamofireClient.swift in Sources */,
 				B02F57EE2C42D66B00206139 /* Route.swift in Sources */,
+				B00D6C472C71B67C00BE9EBA /* RootViewModel.swift in Sources */,
 				B02F57FD2C43987100206139 /* CAlamofireClientProtocol.swift in Sources */,
 				B02F58132C43B20400206139 /* CombineNetworkingImpl.swift in Sources */,
 				B02F582B2C440C4D00206139 /* FetchSearchResultUseCaseImpl.swift in Sources */,
@@ -726,7 +808,6 @@
 				B02F58312C440DEC00206139 /* RemoteSearchDataSourceImpl.swift in Sources */,
 				B02F582E2C440D6E00206139 /* SearchRepositoryImpl.swift in Sources */,
 				B02F58222C440AC600206139 /* SearchResultResponseDTO.swift in Sources */,
-				B00D6C192C6F743800BE9EBA /* ViewModelType.swift in Sources */,
 				B02F581A2C4408BF00206139 /* FetchSearchResultUseCase.swift in Sources */,
 				B02F57B22C41670300206139 /* OnlyCombineApp.swift in Sources */,
 				B02F57E92C42C72300206139 /* CAlamofireError.swift in Sources */,
@@ -1076,11 +1157,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B070F5222C6DC93100C77949 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		B070F5252C6DC93100C77949 /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B070F5222C6DC93100C77949 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

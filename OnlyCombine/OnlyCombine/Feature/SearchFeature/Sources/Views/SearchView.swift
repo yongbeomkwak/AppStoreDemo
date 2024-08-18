@@ -5,7 +5,11 @@ import Combine
 
 struct SearchView: View {
     
-    var viewModel = SearchViewModel()
+    @StateObject var viewModel: SearchViewModel
+    
+    init(viewModel: SearchViewModel) {
+        self._viewModel = .init(wrappedValue: viewModel)
+    }
    
     
     var body: some View {
@@ -20,5 +24,6 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView()
+    
+    SearchView(viewModel: SearchViewModel(fetchSearchResultUseCase: FetchSearchResultUseCaseSpy()))
 }
