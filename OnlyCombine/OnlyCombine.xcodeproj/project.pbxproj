@@ -19,7 +19,7 @@
 		B00D6C4D2C71CBF300BE9EBA /* SearchNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C4C2C71CBF300BE9EBA /* SearchNavigation.swift */; };
 		B00D6C502C71D42400BE9EBA /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C4F2C71D42400BE9EBA /* ResultView.swift */; };
 		B00D6C522C71D5F600BE9EBA /* SearchResultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C512C71D5F600BE9EBA /* SearchResultFactory.swift */; };
-		B00D6C562C71D64B00BE9EBA /* SearchResultComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C552C71D64B00BE9EBA /* SearchResultComponent.swift */; };
+		B00D6C562C71D64B00BE9EBA /* SearchResultFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C552C71D64B00BE9EBA /* SearchResultFactoryImpl.swift */; };
 		B00D6C582C71D86A00BE9EBA /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C572C71D86A00BE9EBA /* ResultViewModel.swift */; };
 		B00D6C5B2C71DFE300BE9EBA /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D6C5A2C71DFE300BE9EBA /* Publisher+Extension.swift */; };
 		B02F57B22C41670300206139 /* OnlyCombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F57B12C41670300206139 /* OnlyCombineApp.swift */; };
@@ -91,7 +91,7 @@
 		B00D6C4C2C71CBF300BE9EBA /* SearchNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigation.swift; sourceTree = "<group>"; };
 		B00D6C4F2C71D42400BE9EBA /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		B00D6C512C71D5F600BE9EBA /* SearchResultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultFactory.swift; sourceTree = "<group>"; };
-		B00D6C552C71D64B00BE9EBA /* SearchResultComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultComponent.swift; sourceTree = "<group>"; };
+		B00D6C552C71D64B00BE9EBA /* SearchResultFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultFactoryImpl.swift; sourceTree = "<group>"; };
 		B00D6C572C71D86A00BE9EBA /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		B00D6C5A2C71DFE300BE9EBA /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
 		B02F57AE2C41670300206139 /* OnlyCombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlyCombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,7 +199,7 @@
 		B00D6C1D2C702A5A00BE9EBA /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				B00D6C532C71D62D00BE9EBA /* Components */,
+				B00D6C532C71D62D00BE9EBA /* Factory */,
 				B00D6C1E2C702A5F00BE9EBA /* Assembly */,
 			);
 			path = DI;
@@ -314,12 +314,12 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		B00D6C532C71D62D00BE9EBA /* Components */ = {
+		B00D6C532C71D62D00BE9EBA /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				B00D6C552C71D64B00BE9EBA /* SearchResultComponent.swift */,
+				B00D6C552C71D64B00BE9EBA /* SearchResultFactoryImpl.swift */,
 			);
-			path = Components;
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		B00D6C542C71D63A00BE9EBA /* Factory */ = {
@@ -857,7 +857,7 @@
 				B00D6C472C71B67C00BE9EBA /* RootViewModel.swift in Sources */,
 				B02F57FD2C43987100206139 /* CAlamofireClientProtocol.swift in Sources */,
 				B02F58132C43B20400206139 /* CombineNetworkingImpl.swift in Sources */,
-				B00D6C562C71D64B00BE9EBA /* SearchResultComponent.swift in Sources */,
+				B00D6C562C71D64B00BE9EBA /* SearchResultFactoryImpl.swift in Sources */,
 				B02F582B2C440C4D00206139 /* FetchSearchResultUseCaseImpl.swift in Sources */,
 				B070F52C2C6DCBB500C77949 /* SearchViewModel.swift in Sources */,
 				B02F58312C440DEC00206139 /* RemoteSearchDataSourceImpl.swift in Sources */,

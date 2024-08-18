@@ -19,24 +19,19 @@ struct SearchView: View {
     }
     
 
-   
-    
     var body: some View {
         
         NavigationStack(path: $viewModel.path, root: {
-            List(0..<10) { row in
-                Text("\(row)")
-            }
-            .listStyle(.plain)
-            .navigationTitle("Search")
-        })
-        .navigationDestination(for:SearchNavigation.self, destination: { navigation  in
-            switch navigation.name {
-            case .result:
-                EmptyView()
-               
-            }
-            
+            EmptyView()
+            .navigationDestination(for: SearchNavigation.self, destination: { navigation  in
+                
+                switch navigation.name {
+
+                case .result:
+                    resultViewFactory.makeView(text:viewModel.querySstring) as! ResultView
+                }
+                
+            })
         })
         .searchable(
             text: $viewModel.querySstring, 
@@ -49,9 +44,10 @@ struct SearchView: View {
         }
         
     }
+    
 }
 
 #Preview {
     
-    SearchView(viewModel: SearchViewModel(), resultViewFactory: SearchResultComponent(usecase: FetchSearchResultUseCaseSpy()))
+    SearchView(viewModel: SearchViewModel(), resultViewFactory: SearchResultFactoryImpl(usecase: FetchSearchResultUseCaseSpy()))
 }

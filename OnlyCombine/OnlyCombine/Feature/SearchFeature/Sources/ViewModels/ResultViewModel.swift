@@ -23,6 +23,7 @@ final class ResultViewModel: BaseViewModel  {
         fetchSearchResultUseCase
             .execute(text: text, limit: 20)
             .withUnretained(self)
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { error in
                 print(error)
             }, receiveValue: { owner, entity in

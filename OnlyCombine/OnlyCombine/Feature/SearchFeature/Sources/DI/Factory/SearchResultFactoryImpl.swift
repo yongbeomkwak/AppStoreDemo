@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SearchResultComponent: SearchResultFactory {
+struct SearchResultFactoryImpl: SearchResultFactory {
    
     let usecase: any FetchSearchResultUseCase
     

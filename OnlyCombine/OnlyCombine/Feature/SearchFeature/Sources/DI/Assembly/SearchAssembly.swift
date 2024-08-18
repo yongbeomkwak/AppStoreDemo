@@ -11,7 +11,7 @@ struct SearchAssembly: Assembly {
             let usecase = container.resolve(FetchSearchResultUseCase.self)!
           
             
-            return SearchResultComponent(usecase: usecase)
+            return SearchResultFactoryImpl(usecase: usecase)
         }
     
         

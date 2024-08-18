@@ -4,8 +4,6 @@ import SwiftUI
 
 final class SearchViewModel: BaseViewModel  {
         
-   
-    
     @Published var path = NavigationPath()
     @Published var querySstring: String = ""
     var searchButtonDidTap: PassthroughSubject<Void, Never> = .init()

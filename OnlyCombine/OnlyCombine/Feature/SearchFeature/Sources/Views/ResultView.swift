@@ -10,7 +10,7 @@ struct ResultView: View {
     
     var body: some View {
         List(viewModel.results, id: \.self) { item in
-            Text(item.appIcon)
+            Text(item.appName)
         }
     }
 }
